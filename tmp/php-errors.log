@@ -1,0 +1,4 @@
+[15-May-2021 04:47:31 America/New_York] PHP Fatal error:  Call to a member function buildSQL_default() on a non-object in C:\Users\asus\Documents\PHPRunnerProjects\Project5\output\classes\button.php on line 160
+[15-May-2021 04:47:33 America/New_York] PHP Fatal error:  Call to a member function buildSQL_default() on a non-object in C:\Users\asus\Documents\PHPRunnerProjects\Project5\output\classes\button.php on line 160
+[15-May-2021 04:48:36 America/New_York] PHP Fatal error:  Call to a member function buildSQL_default() on a non-object in C:\Users\asus\Documents\PHPRunnerProjects\Project5\output\classes\button.php on line 160
+[15-May-2021 04:48:37 America/New_York] PHP Fatal error:  Call to a member function buildSQL_default() on a non-object in C:\Users\asus\Documents\PHPRunnerProjects\Project5\output\classes\button.php on line 160
