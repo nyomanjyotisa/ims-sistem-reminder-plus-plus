@@ -318,10 +318,17 @@ class ConnectionManager
 		$connectionsIds = array();
 		$connectionsIds["group_product_view"] = "notif_basic1_at_menkz_xyz";
 		$connectionsIds["group_joined_view"] = "notif_basic1_at_menkz_xyz";
-		$connectionsIds["group_product"] = "notif_basic1_at_menkz_xyz";
-		$connectionsIds["group_member_order_detail"] = "notif_basic1_at_menkz_xyz";
+		$connectionsIds["Add New Order"] = "notif_basic1_at_menkz_xyz";
 		$connectionsIds["not_reviewed_order_view"] = "notif_basic1_at_menkz_xyz";
-		$connectionsIds["personal"] = "notif_basic1_at_menkz_xyz";
+		$connectionsIds["Add Order Review"] = "notif_basic1_at_menkz_xyz";
+		$connectionsIds["add_new_checkin"] = "notif_basic1_at_menkz_xyz";
+		$connectionsIds["Room View"] = "notif_basic1_at_menkz_xyz";
+		$connectionsIds["Group as AdminView"] = "notif_basic1_at_menkz_xyz";
+		$connectionsIds["group_room_view"] = "notif_basic1_at_menkz_xyz";
+		$connectionsIds["not_reviewed_checkin_view"] = "notif_basic1_at_menkz_xyz";
+		$connectionsIds["add_checkin_review"] = "notif_basic1_at_menkz_xyz";
+		$connectionsIds["on_progres_order"] = "notif_basic1_at_menkz_xyz";
+		$connectionsIds["not_yet_valid_order"] = "notif_basic1_at_menkz_xyz";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 	

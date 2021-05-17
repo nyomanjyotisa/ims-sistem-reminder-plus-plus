@@ -141,7 +141,7 @@ $tdatagroup_product_view[".rowHighlite"] = true;
 
 											
 					
-
+												
 
 $tdatagroup_product_view[".ajaxCodeSnippetAdded"] = true;
 

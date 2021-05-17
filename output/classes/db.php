@@ -404,9 +404,11 @@ class DB
 		$dalTables[ $conn->connId ] = array();
 		if( "notif_basic1_at_menkz_xyz" == $conn->connId )
 		{
+			$dalTables[$conn->connId][] = array("name" => "business_type", "varname" => "notif_basic1_at_menkz_xyz__business_type", "altvarname" => "business_type", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 			$dalTables[$conn->connId][] = array("name" => "country", "varname" => "notif_basic1_at_menkz_xyz__country", "altvarname" => "country", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 			$dalTables[$conn->connId][] = array("name" => "group", "varname" => "notif_basic1_at_menkz_xyz__group", "altvarname" => "group", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 			$dalTables[$conn->connId][] = array("name" => "group_member", "varname" => "notif_basic1_at_menkz_xyz__group_member", "altvarname" => "group_member", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
+			$dalTables[$conn->connId][] = array("name" => "group_member_checkin", "varname" => "notif_basic1_at_menkz_xyz__group_member_checkin", "altvarname" => "group_member_checkin", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 			$dalTables[$conn->connId][] = array("name" => "group_member_order", "varname" => "notif_basic1_at_menkz_xyz__group_member_order", "altvarname" => "group_member_order", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 			$dalTables[$conn->connId][] = array("name" => "group_member_order_detail", "varname" => "notif_basic1_at_menkz_xyz__group_member_order_detail", "altvarname" => "group_member_order_detail", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 			$dalTables[$conn->connId][] = array("name" => "group_product", "varname" => "notif_basic1_at_menkz_xyz__group_product", "altvarname" => "group_product", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");

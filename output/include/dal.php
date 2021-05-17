@@ -47,9 +47,11 @@ function DBLookup($sql)
   */
 class tDAL
 {
+	var $tblnotif_basic1_at_menkz_xyz__business_type;
 	var $tblnotif_basic1_at_menkz_xyz__country;
 	var $tblnotif_basic1_at_menkz_xyz__group;
 	var $tblnotif_basic1_at_menkz_xyz__group_member;
+	var $tblnotif_basic1_at_menkz_xyz__group_member_checkin;
 	var $tblnotif_basic1_at_menkz_xyz__group_member_order;
 	var $tblnotif_basic1_at_menkz_xyz__group_member_order_detail;
 	var $tblnotif_basic1_at_menkz_xyz__group_product;
@@ -65,9 +67,11 @@ class tDAL
 	{
 		if($this->lstTables)
 			return;
+		$this->lstTables[] = array("name" => "business_type", "varname" => "notif_basic1_at_menkz_xyz__business_type", "altvarname" => "business_type", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "country", "varname" => "notif_basic1_at_menkz_xyz__country", "altvarname" => "country", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "group", "varname" => "notif_basic1_at_menkz_xyz__group", "altvarname" => "group", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "group_member", "varname" => "notif_basic1_at_menkz_xyz__group_member", "altvarname" => "group_member", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
+		$this->lstTables[] = array("name" => "group_member_checkin", "varname" => "notif_basic1_at_menkz_xyz__group_member_checkin", "altvarname" => "group_member_checkin", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "group_member_order", "varname" => "notif_basic1_at_menkz_xyz__group_member_order", "altvarname" => "group_member_order", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "group_member_order_detail", "varname" => "notif_basic1_at_menkz_xyz__group_member_order_detail", "altvarname" => "group_member_order_detail", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "group_product", "varname" => "notif_basic1_at_menkz_xyz__group_product", "altvarname" => "group_product", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");

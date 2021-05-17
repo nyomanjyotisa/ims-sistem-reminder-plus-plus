@@ -189,13 +189,27 @@ function checkTableName($shortTName )
 		return true;
 	if ("group_joined_view" == $shortTName )
 		return true;
-	if ("group_product" == $shortTName )
-		return true;
-	if ("group_member_order_detail" == $shortTName )
+	if ("add_new_order" == $shortTName )
 		return true;
 	if ("not_reviewed_order_view" == $shortTName )
 		return true;
-	if ("personal" == $shortTName )
+	if ("add_order_review" == $shortTName )
+		return true;
+	if ("add_new_checkin" == $shortTName )
+		return true;
+	if ("room_view" == $shortTName )
+		return true;
+	if ("group_as_adminview" == $shortTName )
+		return true;
+	if ("group_room_view" == $shortTName )
+		return true;
+	if ("not_reviewed_checkin_view" == $shortTName )
+		return true;
+	if ("add_checkin_review" == $shortTName )
+		return true;
+	if ("on_progres_order" == $shortTName )
+		return true;
+	if ("not_yet_valid_order" == $shortTName )
 		return true;
 	return false;
 }
@@ -267,21 +281,12 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("group_product");
+		$strPerm = GetUserPermissions("Add New Order");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="group_product";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("group_member_order_detail");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="group_member_order_detail";
+		$arr[]="Add New Order";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -294,12 +299,84 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("personal");
+		$strPerm = GetUserPermissions("Add Order Review");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="personal";
+		$arr[]="Add Order Review";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("add_new_checkin");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="add_new_checkin";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Room View");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Room View";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Group as AdminView");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Group as AdminView";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group_room_view");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group_room_view";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("not_reviewed_checkin_view");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="not_reviewed_checkin_view";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("add_checkin_review");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="add_checkin_review";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("on_progres_order");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="on_progres_order";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("not_yet_valid_order");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="not_yet_valid_order";
 	}
 	return $arr;
 }
@@ -312,10 +389,17 @@ function GetTablesListWithoutSecurity()
 	$arr = array();
 	$arr[]="group_product_view";
 	$arr[]="group_joined_view";
-	$arr[]="group_product";
-	$arr[]="group_member_order_detail";
+	$arr[]="Add New Order";
 	$arr[]="not_reviewed_order_view";
-	$arr[]="personal";
+	$arr[]="Add Order Review";
+	$arr[]="add_new_checkin";
+	$arr[]="Room View";
+	$arr[]="Group as AdminView";
+	$arr[]="group_room_view";
+	$arr[]="not_reviewed_checkin_view";
+	$arr[]="add_checkin_review";
+	$arr[]="on_progres_order";
+	$arr[]="not_yet_valid_order";
 	return $arr;
 }
 
@@ -1035,12 +1119,7 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="group_product" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="group_member_order_detail" )
+	if( $table=="Add New Order" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
@@ -1050,7 +1129,47 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="personal" )
+	if( $table=="Add Order Review" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="add_new_checkin" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Room View" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Group as AdminView" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group_room_view" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="not_reviewed_checkin_view" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="add_checkin_review" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="on_progres_order" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="not_yet_valid_order" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

@@ -442,13 +442,27 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
-		if("group_product" == $this->chrt_array['tables'][0])
-			return true;
 		if("group_member_order_detail" == $this->chrt_array['tables'][0])
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
-		if("personal" == $this->chrt_array['tables'][0])
+		if("group_member_order" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_member_checkin" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_member_checkin" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_member_order_detail" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_member_order" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

@@ -62,33 +62,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "group_product";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "glyphicon-leaf";
-	$menuNode["iconType"] = "2";
-	$menuNode["iconShow"] = "2";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Group Product";
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "4";
-	$menuNode["name"] = "";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "group_member_order_detail";
+	$menuNode["table"] = "Add New Order";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "0";
@@ -104,13 +78,13 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Group Member Order Detail";
+	$menuNode["title"] = "Add New Order";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "5";
+	$menuNode["id"] = "4";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -136,11 +110,11 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "6";
+	$menuNode["id"] = "5";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "personal";
+	$menuNode["table"] = "Add Order Review";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "0";
@@ -150,13 +124,221 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "glyphicon-headphones";
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Add Order Review";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "6";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "add_new_checkin";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "glyphicon-leaf";
 	$menuNode["iconType"] = "2";
 	$menuNode["iconShow"] = "2";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Personal";
+	$menuNode["title"] = "Add New Checkin";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "7";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "Room View";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "glyphicon-camera";
+	$menuNode["iconType"] = "2";
+	$menuNode["iconShow"] = "2";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Room View";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "8";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "Group as AdminView";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Group as AdminView";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "9";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "group_room_view";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Group Room View";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "10";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "not_reviewed_checkin_view";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Not Reviewed Checkin View";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "11";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "add_checkin_review";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Add Checkin Review";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "12";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "on_progres_order";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("Add");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "On Progres Order";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "13";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "not_yet_valid_order";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Not Yet Valid Order";
 
 
 

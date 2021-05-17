@@ -310,11 +310,7 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="group_product")
-		{
-			return false;
-		}
-		if($table=="group_member_order_detail")
+		if($table=="Add New Order")
 		{
 			return false;
 		}
@@ -322,7 +318,39 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="personal")
+		if($table=="Add Order Review")
+		{
+			return false;
+		}
+		if($table=="add_new_checkin")
+		{
+			return false;
+		}
+		if($table=="Room View")
+		{
+			return false;
+		}
+		if($table=="Group as AdminView")
+		{
+			return false;
+		}
+		if($table=="group_room_view")
+		{
+			return false;
+		}
+		if($table=="not_reviewed_checkin_view")
+		{
+			return false;
+		}
+		if($table=="add_checkin_review")
+		{
+			return false;
+		}
+		if($table=="on_progres_order")
+		{
+			return false;
+		}
+		if($table=="not_yet_valid_order")
 		{
 			return false;
 		}
@@ -642,11 +670,7 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="group_product")
-		{
-			return false;
-		}
-		if($table=="group_member_order_detail")
+		if($table=="Add New Order")
 		{
 			return false;
 		}
@@ -654,7 +678,39 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="personal")
+		if($table=="Add Order Review")
+		{
+			return false;
+		}
+		if($table=="add_new_checkin")
+		{
+			return false;
+		}
+		if($table=="Room View")
+		{
+			return false;
+		}
+		if($table=="Group as AdminView")
+		{
+			return false;
+		}
+		if($table=="group_room_view")
+		{
+			return false;
+		}
+		if($table=="not_reviewed_checkin_view")
+		{
+			return false;
+		}
+		if($table=="add_checkin_review")
+		{
+			return false;
+		}
+		if($table=="on_progres_order")
+		{
+			return false;
+		}
+		if($table=="not_yet_valid_order")
 		{
 			return false;
 		}

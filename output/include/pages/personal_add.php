@@ -1,5 +1,7 @@
 <?php
-			$optionsArray = array( 'captcha' => array( 'captcha' => false ),
+			$optionsArray = array( 'details' => array( 'Add Order Review2' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
+'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'name',
 'mail',
 'country_id',

@@ -2806,7 +2806,7 @@ class ProjectSettings
 	 */
 	public static function getForLogin()
 	{
-		return new ProjectSettings("personal", PAGE_LIST);
+		return null;
 	}
 
 	/**
@@ -3214,14 +3214,28 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "group_product_view" ] = "group_product_view";
 	$projectEntities[ "group_joined_view" ] = array( "url" => "group_joined_view", "type" => 6 );
 	$projectEntitiesReverse[ "group_joined_view" ] = "group_joined_view";
-	$projectEntities[ "group_product" ] = array( "url" => "group_product", "type" => 0 );
-	$projectEntitiesReverse[ "group_product" ] = "group_product";
-	$projectEntities[ "group_member_order_detail" ] = array( "url" => "group_member_order_detail", "type" => 1 );
-	$projectEntitiesReverse[ "group_member_order_detail" ] = "group_member_order_detail";
+	$projectEntities[ "Add New Order" ] = array( "url" => "add_new_order", "type" => 1 );
+	$projectEntitiesReverse[ "add_new_order" ] = "Add New Order";
 	$projectEntities[ "not_reviewed_order_view" ] = array( "url" => "not_reviewed_order_view", "type" => 6 );
 	$projectEntitiesReverse[ "not_reviewed_order_view" ] = "not_reviewed_order_view";
-	$projectEntities[ "personal" ] = array( "url" => "personal", "type" => 0 );
-	$projectEntitiesReverse[ "personal" ] = "personal";
+	$projectEntities[ "Add Order Review" ] = array( "url" => "add_order_review", "type" => 1 );
+	$projectEntitiesReverse[ "add_order_review" ] = "Add Order Review";
+	$projectEntities[ "add_new_checkin" ] = array( "url" => "add_new_checkin", "type" => 1 );
+	$projectEntitiesReverse[ "add_new_checkin" ] = "add_new_checkin";
+	$projectEntities[ "Room View" ] = array( "url" => "room_view", "type" => 6 );
+	$projectEntitiesReverse[ "room_view" ] = "Room View";
+	$projectEntities[ "Group as AdminView" ] = array( "url" => "group_as_adminview", "type" => 6 );
+	$projectEntitiesReverse[ "group_as_adminview" ] = "Group as AdminView";
+	$projectEntities[ "group_room_view" ] = array( "url" => "group_room_view", "type" => 6 );
+	$projectEntitiesReverse[ "group_room_view" ] = "group_room_view";
+	$projectEntities[ "not_reviewed_checkin_view" ] = array( "url" => "not_reviewed_checkin_view", "type" => 6 );
+	$projectEntitiesReverse[ "not_reviewed_checkin_view" ] = "not_reviewed_checkin_view";
+	$projectEntities[ "add_checkin_review" ] = array( "url" => "add_checkin_review", "type" => 1 );
+	$projectEntitiesReverse[ "add_checkin_review" ] = "add_checkin_review";
+	$projectEntities[ "on_progres_order" ] = array( "url" => "on_progres_order", "type" => 1 );
+	$projectEntitiesReverse[ "on_progres_order" ] = "on_progres_order";
+	$projectEntities[ "not_yet_valid_order" ] = array( "url" => "not_yet_valid_order", "type" => 1 );
+	$projectEntitiesReverse[ "not_yet_valid_order" ] = "not_yet_valid_order";
 }
 
 function findTable( $table ) {

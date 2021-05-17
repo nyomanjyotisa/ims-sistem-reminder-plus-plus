@@ -101,6 +101,7 @@ if( $pages[PAGE_LIST] ) {
 
 $tdatanot_reviewed_order_view[".strSortControlSettingsJSON"] = "";
 
+$tdatanot_reviewed_order_view[".strClickActionJSON"] = "{\"fields\":{\"group_member_order\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"order_date\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}},\"total\":{\"action\":\"noaction\",\"codeData\":{\"snippet\":\"\"},\"gridData\":{},\"openData\":{}}},\"row\":{\"action\":\"code\",\"codeData\":{\"snippet\":\"not_reviewed_order_view_ajax\"},\"gridData\":{\"action\":\"checkbox\",\"table\":null},\"openData\":{\"how\":\"goto\",\"page\":\"url\",\"table\":null,\"url\":\"\"}}}";
 
 
 
@@ -138,13 +139,15 @@ $tdatanot_reviewed_order_view[".rowHighlite"] = true;
 
 
 
+														
+					
 									
 
-$tdatanot_reviewed_order_view[".ajaxCodeSnippetAdded"] = false;
+$tdatanot_reviewed_order_view[".ajaxCodeSnippetAdded"] = true;
 
-$tdatanot_reviewed_order_view[".buttonsAdded"] = false;
+$tdatanot_reviewed_order_view[".buttonsAdded"] = true;
 
-$tdatanot_reviewed_order_view[".addPageEvents"] = false;
+$tdatanot_reviewed_order_view[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatanot_reviewed_order_view[".isUseTimeForSearch"] = false;
@@ -690,7 +693,8 @@ $tdatanot_reviewed_order_view[".sqlquery"] = $queryData_not_reviewed_order_view;
 
 
 
-$tableEvents["not_reviewed_order_view"] = new eventsBase;
-$tdatanot_reviewed_order_view[".hasEvents"] = false;
+include_once(getabspath("include/not_reviewed_order_view_events.php"));
+$tableEvents["not_reviewed_order_view"] = new eventclass_not_reviewed_order_view;
+$tdatanot_reviewed_order_view[".hasEvents"] = true;
 
 ?>

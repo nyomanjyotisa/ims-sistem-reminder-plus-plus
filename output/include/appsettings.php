@@ -525,8 +525,6 @@ $globalSettings["popupPagesLayoutNames"] = array();
 					
 ;
 $globalSettings["popupPagesLayoutNames"]["login"] = "login";
-			;
-$globalSettings["popupPagesLayoutNames"]["register"] = "login";
 
 //mail settings
 $globalSettings["useBuiltInMailer"] = false;
@@ -630,8 +628,7 @@ $cUserNameField	= "mail";
 $cPasswordField	= "name";
 $cUserGroupField = "mail";
 $cEmailField = "";
-$globalSettings["usersTableInProject"] = true;
-$globalSettings["usersDatasourceTable"] = "personal";
+$globalSettings["usersTableInProject"] = false;
 
 $globalSettings["jwtSecret"] = "scvfynH01V8Fy5Cywsgr";
 
@@ -655,9 +652,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "119_1621224247";
+$projectBuildKey = "161_1621224247";
 $wizardBuildKey = "34702";
-$projectBuildNumber = "119";
+$projectBuildNumber = "161";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -686,9 +683,17 @@ $tableCaptions["English"] = array();
 $tableCaptions["English"][""] = "";
 $tableCaptions["English"]["group_product_view"] = "Group Product View";
 $tableCaptions["English"]["group_joined_view"] = "Group Joined View";
-$tableCaptions["English"]["group_product"] = "Group Product";
-$tableCaptions["English"]["group_member_order_detail"] = "Group Member Order Detail";
+$tableCaptions["English"]["Add_New_Order"] = "Add New Order";
 $tableCaptions["English"]["not_reviewed_order_view"] = "Not Reviewed Order View";
+$tableCaptions["English"]["Add_Order_Review"] = "Add Order Review";
+$tableCaptions["English"]["add_new_checkin"] = "Add New Checkin";
+$tableCaptions["English"]["Room_View"] = "Room View";
+$tableCaptions["English"]["Group_as_AdminView"] = "Group as AdminView";
+$tableCaptions["English"]["group_room_view"] = "Group Room View";
+$tableCaptions["English"]["not_reviewed_checkin_view"] = "Not Reviewed Checkin View";
+$tableCaptions["English"]["add_checkin_review"] = "Add Checkin Review";
+$tableCaptions["English"]["on_progres_order"] = "On Progres Order";
+$tableCaptions["English"]["not_yet_valid_order"] = "Not Yet Valid Order";
 $tableCaptions["English"]["personal"] = "Personal";
 
 

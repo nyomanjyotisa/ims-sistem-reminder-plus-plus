@@ -6,11 +6,11 @@ $tdatapersonal[".OwnerID"] = "";
 $tdatapersonal[".OriginalTable"] = "personal";
 
 
-$tdatapersonal[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"search\":[\"search\"]}" );
+$tdatapersonal[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"search\":[\"search\"]}" );
 $tdatapersonal[".originalPagesByType"] = $tdatapersonal[".pagesByType"];
-$tdatapersonal[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"search\":[\"search\"]}" ) );
+$tdatapersonal[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"search\":[\"search\"]}" ) );
 $tdatapersonal[".originalPages"] = $tdatapersonal[".pages"];
-$tdatapersonal[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"search\":\"search\"}" );
+$tdatapersonal[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"search\":\"search\"}" );
 $tdatapersonal[".originalDefaultPages"] = $tdatapersonal[".defaultPages"];
 
 //	field labels
@@ -144,7 +144,7 @@ $tdatapersonal[".rowHighlite"] = true;
 
 
 
-									
+												
 
 $tdatapersonal[".ajaxCodeSnippetAdded"] = false;
 
@@ -1009,6 +1009,36 @@ $page_titles["personal"] = &$pageTitlespersonal;
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 $detailsTablesData["personal"] = array();
+//	Add Order Review2
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="Add Order Review2";
+		$detailsParam["dOriginalTable"] = "group_member_order";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "add_order_review2";
+	$detailsParam["dCaptionTable"] = GetTableCaption("Add_Order_Review2");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["personal"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["personal"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["masterKeys"][]="member_id";
+
+				$detailsTablesData["personal"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["detailKeys"][]="member_id";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["personal"] = array();

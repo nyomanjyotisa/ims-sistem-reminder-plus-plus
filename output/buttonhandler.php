@@ -65,6 +65,34 @@ if( $eventId == 'buy_single_product_ajax' && "group_product_view" == $table )
 	ajaxHandler_buy_single_product_ajax($params);
 	return;
 }
+if( $eventId == 'not_reviewed_order_view_ajax' && "not_reviewed_order_view" == $table )
+{
+	require_once("include/not_reviewed_order_view_variables.php");
+	$cipherer = new RunnerCipherer("not_reviewed_order_view");
+	ajaxHandler_not_reviewed_order_view_ajax($params);
+	return;
+}
+if( $eventId == 'Group_as_AdminView_ajax' && "Group as AdminView" == $table )
+{
+	require_once("include/group_as_adminview_variables.php");
+	$cipherer = new RunnerCipherer("Group as AdminView");
+	ajaxHandler_Group_as_AdminView_ajax($params);
+	return;
+}
+if( $eventId == 'group_room_view_ajax' && "group_room_view" == $table )
+{
+	require_once("include/group_room_view_variables.php");
+	$cipherer = new RunnerCipherer("group_room_view");
+	ajaxHandler_group_room_view_ajax($params);
+	return;
+}
+if( $eventId == 'not_reviewed_checkin_view_ajax' && "not_reviewed_checkin_view" == $table )
+{
+	require_once("include/not_reviewed_checkin_view_variables.php");
+	$cipherer = new RunnerCipherer("not_reviewed_checkin_view");
+	ajaxHandler_not_reviewed_checkin_view_ajax($params);
+	return;
+}
 
 
 
@@ -199,6 +227,162 @@ function ajaxHandler_buy_single_product_ajax($params)
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams));
 	// Put your code here.
 
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function ajaxHandler_not_reviewed_order_view_ajax($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = 'grid';
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+
+	$contextParams["data"] = $button->getRecordData();
+	$contextParams["newData"] = $params['fieldsData'];
+	$contextParams["masterData"] = $masterData;
+
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams));
+	// Put your code here.
+$result["txt"] = $params["txt"]." world!";
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function ajaxHandler_Group_as_AdminView_ajax($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = 'grid';
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+
+	$contextParams["data"] = $button->getRecordData();
+	$contextParams["newData"] = $params['fieldsData'];
+	$contextParams["masterData"] = $masterData;
+
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams));
+	// Put your code here.
+$result["txt"] = $params["txt"]." world!";
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function ajaxHandler_group_room_view_ajax($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = 'grid';
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+
+	$contextParams["data"] = $button->getRecordData();
+	$contextParams["newData"] = $params['fieldsData'];
+	$contextParams["masterData"] = $masterData;
+
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams));
+	// Put your code here.
+$result["txt"] = $params["txt"]." world!";
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function ajaxHandler_not_reviewed_checkin_view_ajax($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = 'grid';
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+
+	$contextParams["data"] = $button->getRecordData();
+	$contextParams["newData"] = $params['fieldsData'];
+	$contextParams["masterData"] = $masterData;
+
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams));
+	// Put your code here.
+$result["txt"] = $params["txt"]." world!";
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);

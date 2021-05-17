@@ -138,7 +138,7 @@ $tdatagroup_joined_view[".rowHighlite"] = true;
 
 								
 					
-			
+															
 
 $tdatagroup_joined_view[".ajaxCodeSnippetAdded"] = true;
 
