@@ -525,6 +525,8 @@ $globalSettings["popupPagesLayoutNames"] = array();
 					
 ;
 $globalSettings["popupPagesLayoutNames"]["login"] = "login";
+			;
+$globalSettings["popupPagesLayoutNames"]["register"] = "login";
 
 //mail settings
 $globalSettings["useBuiltInMailer"] = false;
@@ -628,7 +630,8 @@ $cUserNameField	= "mail";
 $cPasswordField	= "name";
 $cUserGroupField = "mail";
 $cEmailField = "";
-$globalSettings["usersTableInProject"] = false;
+$globalSettings["usersTableInProject"] = true;
+$globalSettings["usersDatasourceTable"] = "personal";
 
 $globalSettings["jwtSecret"] = "scvfynH01V8Fy5Cywsgr";
 
@@ -652,9 +655,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "97_1621000047";
+$projectBuildKey = "119_1621224247";
 $wizardBuildKey = "34702";
-$projectBuildNumber = "97";
+$projectBuildNumber = "119";
 
 $mlang_messages = array();
 $mlang_charsets = array();

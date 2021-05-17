@@ -103,6 +103,20 @@ function InitLookupLinks()
 			$lookupTableLinks["group_product"]["group_member_order_detail.group_product_id"] = array();
 		}
 		$lookupTableLinks["group_product"]["group_member_order_detail.group_product_id"]["edit"] = array("table" => "group_member_order_detail", "field" => "group_product_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["country"] ) ) {
+			$lookupTableLinks["country"] = array();
+		}
+		if( !isset( $lookupTableLinks["country"]["personal.country_id"] )) {
+			$lookupTableLinks["country"]["personal.country_id"] = array();
+		}
+		$lookupTableLinks["country"]["personal.country_id"]["edit"] = array("table" => "personal", "field" => "country_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["province"] ) ) {
+			$lookupTableLinks["province"] = array();
+		}
+		if( !isset( $lookupTableLinks["province"]["personal.province_id"] )) {
+			$lookupTableLinks["province"]["personal.province_id"] = array();
+		}
+		$lookupTableLinks["province"]["personal.province_id"]["edit"] = array("table" => "personal", "field" => "province_id", "page" => "edit");
 }
 
 ?>

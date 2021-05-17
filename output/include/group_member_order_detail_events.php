@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["AfterAdd"]=true;
 
+		$this->events["ProcessValuesAdd"]=true;
+
 
 	}
 
@@ -39,34 +41,58 @@ function AfterAdd(&$values, &$keys, $inline, &$pageObject)
 {
 
 		
+$data = array();
+$data["member_id"] = $_SESSION["member_id"];
+$data["group_id"] = $_SESSION["group_id"];
+$rs = DB::Select("group_member", $data );
+while( $record = $rs->fetchAssoc() )
+{
+    $group_member_id = $record["group_member_id"];
+}
 
 $data = array();
-$data["group_member_id"] = "1";
+$data["group_member_id"] = $group_member_id;
 $data["member_id"] = $_SESSION["member_id"];
 $data["group_id"] = $_SESSION["group_id"];
 $data["order_date"] = NOW();
 $data["valid"] = "0";
-$data["currency"] = "1";
+$data["currency"] = "IDR";
 DB::Insert("group_member_order", $data );
+
+$rs = DB::Query("select * from group_member_order ORDER BY group_member_order DESC LIMIT 1");
+
+while( $record = $rs->fetchAssoc() )
+{
+    $group_member_order_id = $record["group_member_order"];
+}
+
+$data = array();
+$data["group_product_id"] = $_SESSION["product_id"];
+$rs = DB::Select("group_product", $data );
+while( $record = $rs->fetchAssoc() )
+{
+    $nominal = $record["price"];
+}
+
 
 $data = array();
 $keyvalues = array();
-$data["group_member_order_id"] = "1";
-$data["group_member_id"] = "1";
+$data["group_member_order_id"] = $group_member_order_id;
+$data["group_member_id"] = $group_member_id;
 $data["member_id"] = $_SESSION["member_id"];
 $data["group_id"] = $_SESSION["group_id"];
-$data["group_product_id"] = "1";
-$data["nominal"] = "1";
+$data["group_product_id"] = $_SESSION["product_id"];
+$data["nominal"] = $nominal;
 $data["quantity"] = $values["quantity"];
-$data["total"] = "1";
+$data["total"] = $nominal*$values["quantity"];
 $data["progress"] = "0";
 $keyvalues["group_member_order_detail_id"] = $values["group_member_order_detail_id"];
 DB::Update("group_member_order_detail", $data, $keyvalues );
 
 $data = array();
 $keyvalues = array();
-$data["total"] = "1";
-$keyvalues["group_member_order_id"] = $values["group_member_order_id"];
+$data["total"] = $nominal*$values["quantity"];
+$keyvalues["group_member_order"] = $group_member_order_id;
 DB::Update("group_member_order", $data , $keyvalues);
 
 
@@ -96,6 +122,81 @@ DB::Update("group_member_order", $data , $keyvalues);
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Process record values
+function ProcessValuesAdd(&$values, &$pageObject)
+{
+
+		$_SESSION["product_id"] = $_GET[ "product_id" ];
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function ProcessValuesAdd
+
 		
 		
 		

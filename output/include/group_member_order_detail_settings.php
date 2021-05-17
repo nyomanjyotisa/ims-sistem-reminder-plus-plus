@@ -806,9 +806,8 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 1;
+				$edata["LookupType"] = 2;
 	$edata["LookupTable"] = "personal";
-	$edata["LookupConnId"] = "notif_basic1_at_menkz_xyz";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -827,8 +826,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 	
 	
 	
-		$edata["SimpleAdd"] = true;
-
+	
 
 	
 	

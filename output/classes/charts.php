@@ -448,6 +448,8 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
+		if("personal" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

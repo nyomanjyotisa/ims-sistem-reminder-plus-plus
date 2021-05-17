@@ -321,6 +321,7 @@ class ConnectionManager
 		$connectionsIds["group_product"] = "notif_basic1_at_menkz_xyz";
 		$connectionsIds["group_member_order_detail"] = "notif_basic1_at_menkz_xyz";
 		$connectionsIds["not_reviewed_order_view"] = "notif_basic1_at_menkz_xyz";
+		$connectionsIds["personal"] = "notif_basic1_at_menkz_xyz";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 	

@@ -322,6 +322,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="personal")
+		{
+			return false;
+		}
 	}
 	
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -647,6 +651,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="not_reviewed_order_view")
+		{
+			return false;
+		}
+		if($table=="personal")
 		{
 			return false;
 		}

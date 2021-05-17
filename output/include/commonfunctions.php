@@ -195,6 +195,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("not_reviewed_order_view" == $shortTName )
 		return true;
+	if ("personal" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -290,6 +292,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="not_reviewed_order_view";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("personal");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="personal";
+	}
 	return $arr;
 }
 
@@ -304,6 +315,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="group_product";
 	$arr[]="group_member_order_detail";
 	$arr[]="not_reviewed_order_view";
+	$arr[]="personal";
 	return $arr;
 }
 
@@ -1034,6 +1046,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="not_reviewed_order_view" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="personal" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

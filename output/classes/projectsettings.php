@@ -2806,7 +2806,7 @@ class ProjectSettings
 	 */
 	public static function getForLogin()
 	{
-		return null;
+		return new ProjectSettings("personal", PAGE_LIST);
 	}
 
 	/**
@@ -3220,6 +3220,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "group_member_order_detail" ] = "group_member_order_detail";
 	$projectEntities[ "not_reviewed_order_view" ] = array( "url" => "not_reviewed_order_view", "type" => 6 );
 	$projectEntitiesReverse[ "not_reviewed_order_view" ] = "not_reviewed_order_view";
+	$projectEntities[ "personal" ] = array( "url" => "personal", "type" => 0 );
+	$projectEntitiesReverse[ "personal" ] = "personal";
 }
 
 function findTable( $table ) {

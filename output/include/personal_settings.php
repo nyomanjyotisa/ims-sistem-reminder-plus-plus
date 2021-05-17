@@ -6,11 +6,11 @@ $tdatapersonal[".OwnerID"] = "";
 $tdatapersonal[".OriginalTable"] = "personal";
 
 
-$tdatapersonal[".pagesByType"] = my_json_decode( "{\"search\":[\"search\"]}" );
+$tdatapersonal[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"search\":[\"search\"]}" );
 $tdatapersonal[".originalPagesByType"] = $tdatapersonal[".pagesByType"];
-$tdatapersonal[".pages"] = types2pages( my_json_decode( "{\"search\":[\"search\"]}" ) );
+$tdatapersonal[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"search\":[\"search\"]}" ) );
 $tdatapersonal[".originalPages"] = $tdatapersonal[".pages"];
-$tdatapersonal[".defaultPages"] = my_json_decode( "{\"search\":\"search\"}" );
+$tdatapersonal[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"search\":\"search\"}" );
 $tdatapersonal[".originalDefaultPages"] = $tdatapersonal[".defaultPages"];
 
 //	field labels
@@ -144,7 +144,7 @@ $tdatapersonal[".rowHighlite"] = true;
 
 
 
-
+									
 
 $tdatapersonal[".ajaxCodeSnippetAdded"] = false;
 
@@ -156,7 +156,7 @@ $tdatapersonal[".addPageEvents"] = false;
 $tdatapersonal[".isUseTimeForSearch"] = false;
 
 
-$tdatapersonal[".badgeColor"] = "BC8F8F";
+$tdatapersonal[".badgeColor"] = "9ACD32";
 
 
 $tdatapersonal[".allSearchFields"] = array();
@@ -348,7 +348,7 @@ $tdatapersonal[".hideMobileList"] = array();
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
-	//	End validation
+					//	End validation
 
 	
 			
@@ -447,7 +447,7 @@ $tdatapersonal[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Password");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -472,7 +472,8 @@ $tdatapersonal[".hideMobileList"] = array();
 	
 	
 	
-	
+			$edata["HTML5InuptType"] = "text";
+
 		$edata["EditParams"] = "";
 			$edata["EditParams"].= " maxlength=100";
 
@@ -484,7 +485,9 @@ $tdatapersonal[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 	
 	
-	//	End validation
+				if(count($edata["validateAs"]) && !in_array('IsRequired', $edata["validateAs"]['basicValidate']))
+		$edata["validateAs"]['basicValidate'][] = 'IsRequired';
+		//	End validation
 
 	
 			
@@ -621,7 +624,9 @@ $tdatapersonal[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 	
 	
-	//	End validation
+				if(count($edata["validateAs"]) && !in_array('IsRequired', $edata["validateAs"]['basicValidate']))
+		$edata["validateAs"]['basicValidate'][] = 'IsRequired';
+		//	End validation
 
 	
 			
@@ -785,7 +790,7 @@ $tdatapersonal[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 							
 	
-	//	End validation
+					//	End validation
 
 	
 			
@@ -949,7 +954,7 @@ $tdatapersonal[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 							
 	
-	//	End validation
+					//	End validation
 
 	
 			

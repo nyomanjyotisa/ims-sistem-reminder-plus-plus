@@ -47,16 +47,12 @@ function DBLookup($sql)
   */
 class tDAL
 {
-	var $tblnotif_basic1_at_menkz_xyz__business_type;
-	var $tblnotif_basic1_at_menkz_xyz__channel;
 	var $tblnotif_basic1_at_menkz_xyz__country;
 	var $tblnotif_basic1_at_menkz_xyz__group;
 	var $tblnotif_basic1_at_menkz_xyz__group_member;
 	var $tblnotif_basic1_at_menkz_xyz__group_member_order;
 	var $tblnotif_basic1_at_menkz_xyz__group_member_order_detail;
 	var $tblnotif_basic1_at_menkz_xyz__group_product;
-	var $tblnotif_basic1_at_menkz_xyz__group_user_type;
-	var $tblnotif_basic1_at_menkz_xyz__membership_type;
 	var $tblnotif_basic1_at_menkz_xyz__order_type;
 	var $tblnotif_basic1_at_menkz_xyz__personal;
 	var $tblnotif_basic1_at_menkz_xyz__product_type;
@@ -69,16 +65,12 @@ class tDAL
 	{
 		if($this->lstTables)
 			return;
-		$this->lstTables[] = array("name" => "business_type", "varname" => "notif_basic1_at_menkz_xyz__business_type", "altvarname" => "business_type", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
-		$this->lstTables[] = array("name" => "channel", "varname" => "notif_basic1_at_menkz_xyz__channel", "altvarname" => "channel", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "country", "varname" => "notif_basic1_at_menkz_xyz__country", "altvarname" => "country", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "group", "varname" => "notif_basic1_at_menkz_xyz__group", "altvarname" => "group", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "group_member", "varname" => "notif_basic1_at_menkz_xyz__group_member", "altvarname" => "group_member", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "group_member_order", "varname" => "notif_basic1_at_menkz_xyz__group_member_order", "altvarname" => "group_member_order", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "group_member_order_detail", "varname" => "notif_basic1_at_menkz_xyz__group_member_order_detail", "altvarname" => "group_member_order_detail", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "group_product", "varname" => "notif_basic1_at_menkz_xyz__group_product", "altvarname" => "group_product", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
-		$this->lstTables[] = array("name" => "group_user_type", "varname" => "notif_basic1_at_menkz_xyz__group_user_type", "altvarname" => "group_user_type", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
-		$this->lstTables[] = array("name" => "membership_type", "varname" => "notif_basic1_at_menkz_xyz__membership_type", "altvarname" => "membership_type", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "order_type", "varname" => "notif_basic1_at_menkz_xyz__order_type", "altvarname" => "order_type", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "personal", "varname" => "notif_basic1_at_menkz_xyz__personal", "altvarname" => "personal", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
 		$this->lstTables[] = array("name" => "product_type", "varname" => "notif_basic1_at_menkz_xyz__product_type", "altvarname" => "product_type", "connId" => "notif_basic1_at_menkz_xyz", "schema" => "", "connName" => "notif_basic1 at localhost");
