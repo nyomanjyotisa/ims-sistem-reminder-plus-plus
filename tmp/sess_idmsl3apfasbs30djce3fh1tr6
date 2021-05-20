@@ -1,1 +1,0 @@
-myqsladdress|s:9:"127.0.0.1";pluginLogin|b:0;UserID|s:15:"wayan@wayan.com";UserName|s:5:"Wayan";GroupID|s:0:"";AccessLevel|s:4:"User";UserData|a:6:{s:9:"member_id";s:1:"1";s:4:"name";s:5:"Wayan";s:4:"mail";s:15:"wayan@wayan.com";s:8:"password";s:6:"123123";s:10:"country_id";s:1:"1";s:11:"province_id";s:1:"1";}member_id|s:1:"1";MyURL|s:9:"/menu.php";
